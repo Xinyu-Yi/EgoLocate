@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EgoLocate</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="https://xinyu-yi.github.io/EgoLocate/">EgoLocate</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More works <span class="sr-only">(current)</span></a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="https://xinyu-yi.github.io/TransPose/">TransPose</a>
+              <a class="dropdown-item" href="https://xinyu-yi.github.io/PIP/">PIP</a>
+              <a class="dropdown-item" href="https://xinyu-yi.github.io/EgoLocate/">EgoLocate</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="https://xinyu-yi.github.io/">Xinyu Yi</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#method">Method</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#video">Video</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#result">Result</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#citation">Citation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+      
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-12">
+          <div class="container mt-5 mb-2">
+            <h1 class="text-center ">EgoLocate</h1>
+            <h4 class="text-center">Real-time Motion Capture, Localization, and Mapping with Sparse Body-mounted Sensors</h4>
+            <div class="text-center container mb-4 mt-4 ablack">
+              <p>
+                <a href="https://xinyu-yi.github.io/">Xinyu Yi</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://calciferzh.github.io/">Yuxiao Zhou</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://people.mpi-inf.mpg.de/~mhaberma/">Marc Habermann</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">Shaohua Pan</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://people.mpi-inf.mpg.de/~theobalt/">Christian Theobalt</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="http://xufeng.site/">Feng Xu</a><sup>1</sup>
+                <br>
+                <sup>1</sup><a href="https://www.tsinghua.edu.cn/">Tsinghua University</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>2</sup><a href="https://ethz.ch/en.html">ETH Zurich</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>3</sup><a href="https://www.mpi-inf.mpg.de/home/">Max Planck Institute for Informatics</a>
+              </p>
+              <br>
+              <p>
+                <i>
+                  Accepted by <a href="https://s2023.siggraph.org/">SIGGRAPH 2023</a>
+                </i>
+              </p>
+            </div>
+            <!--img src="images/teaser.jpg" alt="" class="img-fluid mt-2 mb-2"--> 
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="container mb-4">
+      <div class="container">
+        <div class="row">
+          <div class="text-center col-6">
+            <div class="embed-responsive embed-responsive-16by9">
+              <video muted controls loop autoplay>
+                <source src="videos/teaser1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="text-center col-6">
+            <div class="embed-responsive embed-responsive-16by9">
+              <video muted controls loop autoplay>
+                <source src="videos/teaser2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-2 mb-2">
+        EgoLocate estimates accurate human pose, localization, and reconstructs the scene in sparse 3D points <strong>from 6 IMUs and a head-mounted camera</strong>. 
+        <br>
+        Importantly, EgoLocate <strong>does not rely on pre-scanning the scene</strong>, and runs in <strong>real time on CPU</strong>.
+        <br><br>
+        <font color="#888888"><i>&quot;Pure inertial mocap is like a human wakling with the eyes closed. This work opens the human eyes with a head-mounted camera.&quot;</i></font>
+      </div>
+    </div>
+      
+    <div class="container">
+      <div class="row mb-1">
+        <div class="col-1-5"></div>
+        <div class="text-center col-3">
+          <div class="container mb-2" style="width: 6rem"><img src="images/paper.svg" alt="Paper" class="card-img"/></div>
+          <a class="btn btn-danger btn-lg disabled" href="#" role="button">Paper</a>
+        </div>
+        <div class="text-center col-3">
+          <div class="container mb-2" style="width: 6rem"><img src="images/video.svg" alt="Video" class="card-img"/></div>    
+          <a class="btn btn-info btn-lg" href="videos/EgoLocate.mp4" role="button">Video</a>
+        </div>
+        <div class="text-center col-3">
+          <div class="container mb-2" style="width: 6rem"><img src="images/code.svg" alt="Code" class="card-img"/></div>    
+          <a class="btn btn-success btn-lg" href="https://github.com/Xinyu-Yi/EgoLocate" role="button">Code</a>
+        </div>
+      </div>
+	    <hr>
+    </div>
+    
+    <div class="container">
+      <h2 class="text-center">Abstract</h2>
+      <div class="container">
+        <div class="embed-responsive" style="padding-top: 32%">
+          <video muted loop autoplay>
+            <source src="videos/abs.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p>
+        Human and environment sensing are two important topics in Computer
+        Vision and Graphics. Human motion is often captured by inertial sensors (<em>left</em>),
+        while the environment is mostly reconstructed using cameras (<em>right</em>). We integrate
+        the two techniques together in EgoLocate (<em>middle</em>), a system that simultaneously
+        performs human motion capture (mocap), localization, and mapping in real
+        time from sparse body-mounted sensors, including 6 inertial measurement
+        units (IMUs) and a monocular phone camera. On one hand, inertial mocap
+        suffers from large translation drift due to the lack of the global positioning
+        signal. EgoLocate leverages image-based simultaneous localization and mapping
+        (SLAM) techniques to locate the human in the reconstructed scene. On
+        the other hand, SLAM often fails when the visual feature is poor. EgoLocate
+        involves inertial mocap to provide a strong prior for the camera motion.
+        Experiments show that localization, a key challenge for both two fields, is
+        largely improved by our technique, compared with the state of the art of the
+        two fields.
+        </p>
+      </div>
+      <hr>
+    </div>
+    
+    <div class="container" id="method">
+      <h2 class="text-center">Method</h2>
+      <div class="container">
+        <img src="images/method.png" alt="method" class="img-fluid mt-2 mb-3" id="method-img">
+        <p>
+          The inputs are real-time <font color="#595926" id="in1"><u>orientation and acceleration measurements</u></font> of 6 IMUs and 
+          <font color="#595926" id="in2"><u>color images</u></font> from a body-worn camera. We first estimate initial human
+          poses and camera poses from sparse inertial signals (<font color="#7F3F3F" id="s1"><u>Inertial Motion Capture</u></font>). 
+          Next, we refine the camera pose by minimizing the mocap constraints
+          and the reprojection errors of the 3D-2D feature matches (<font color="#2D722D" id="s2"><u>Camera Tracking</u></font>). 
+          Then, the refined camera pose and a confidence are used to correct the
+          human’s global position and velocity (<font color="#7F3F3F" id="s3"><u>Body Translation Updater</u></font>). 
+          This results in 60-FPS drift-free <font color="#595926" id="out1"><u>human motion</u></font> output. In parallel, we perform
+          mapping and loop closing using keyframes (<font color="#39397F" id="s4"><u>Mapping &amp; Loop Closing</u></font>). 
+          We calculate another confidence for each map point, and use it in bundle
+          adjustment (BA), where we jointly optimize the map points and the camera poses by a combined mocap and weighted reprojection error. If a loop is detected,
+          we also perform pose graph optimization with mocap constraints. The estimated <font color="#595926" id="out2"><u>map</u></font> is also outputted in real time.
+        </p>
+      </div>
+      <hr>
+    </div>
+    
+    <div class="container" id="video">
+      <h2 class="text-center">Video</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            TBD
+            <!--div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KTqj2a3lKo0" allowfullscreen></iframe>
+            </div-->
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+      
+    <div class="container" id="result">
+      <h2 class="text-center">Comparisons with Inertial Mocap</h2>
+      <div class="container">
+        <div class="row mt-3">
+          <div class="col-6">
+            <div class="embed-responsive embed-responsive-16by9">
+              <video muted controls loop autoplay>
+                <source src="videos/comp1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="embed-responsive embed-responsive-16by9">
+              <video muted controls loop autoplay>
+                <source src="videos/comp2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-6">
+            <div class="embed-responsive embed-responsive-16by9">
+              <video muted controls loop autoplay>
+                <source src="videos/comp3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="embed-responsive embed-responsive-16by9">
+              <video muted controls loop autoplay>
+                <source src="videos/comp4.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="text-center mt-3">Evaluations of Mapping Accuracy</h2>
+      <div class="container">
+        <div class="embed-responsive embed-responsive-4by3">
+          <video muted controls loop autoplay>
+            <source src="videos/eval.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <h2 class="text-center mt-1">Comparisons of Robustness to Occlusions</h2>
+      <div class="container">
+        <div class="embed-responsive" style="padding-top: 32%">
+          <video muted controls loop autoplay>
+            <source src="videos/robust.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="text-center"><i>Note：we use the ORB-SLAM3 viewer in this comparison. Due to randomness, the time and the global frame of each method may not be perfectly aligned.</i></p>
+      </div>
+      <hr>
+    </div>
+
+    <div class="container" id="acknowledgments">
+      <h2 class="text-center">Acknowledgments</h2>
+      <div class="container mb-4">
+        <p>
+          This work was supported by the National Key R&amp;D Program of
+          China (2018YFA0704000), the NSFC (No.62021002), Beijing Natural
+          Science Foundation (M22024), and the Key Research and Development 
+          Project of Tibet Autonomous Region (XZ202101ZY0019G).
+          This work was also supported by THUIBCS, Tsinghua University,
+          and BLBCI, Beijing Municipal Education Commission. This work
+          was partially supported by the ERC consolidator grant 4DReply
+          (770784). The authors would like to thank Wenbin Lin, Zunjie Zhu,
+          Guofeng Zhang, and Haoyu Hu for their extensive help on the
+          experiments and live demos. The authors would also like to thank
+          Ting Shu, Shuyan Han, and Kelan Liu for their help on this project.
+          Feng Xu is the corresponding author.
+        </p>
+      </div>
+    <hr>
+    </div>
+
+    <div class="container" id="citation">
+      <h2 class="text-center">Citation</h2>
+      <div class="container">
+        <div class="container pt-3" style="background-color: #EEF0F2">
+          <pre class="mb-3 ml-3">
+TBD
+          </pre>
+        </div>
+      </div>
+    </div>
+   
+    <div class="container" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-6 col-sm-6 mb-md-0">
+            <address>
+              <br>Contact: <a href="mailto:yixy20@mails.tsinghua.edu.cn">yixy20@mails.tsinghua.edu.cn</a>
+            </address>
+          </div>
+          <div class="col-lg-2 col-12">
+            <a href="https://www.tsinghua.edu.cn/"><img src="images/tsinghua.png" alt="Tsinghua University" class="card-img-bottom"></a>
+          </div>
+          <div class="col-lg-3 col-12">
+            <a href="https://www.mpi-inf.mpg.de/home/"><img src="images/mpii.png" alt="max planck institut informatik" class="card-img-bottom"></a>
+          </div>
+          <div class="col-lg-2 col-12">
+            <a href="https://ethz.ch/en.html"><img src="images/ethz_logo.svg" alt="ETH zurich" class="card-img-bottom"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr> 
+      
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © Xinyu Yi. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.3.1.js"></script>
+    <script src="js/method.js"></script>
+  </body>
+</html>

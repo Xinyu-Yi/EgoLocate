@@ -1,0 +1,7 @@
+venv/
+.idea/
+data/*
+!data/figures
+models/
+__pycache__/
+EgoLocate_large.mp4

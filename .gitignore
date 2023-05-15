@@ -1,0 +1,12 @@
+build/
+lib/
+.idea/
+__pycache__/
+mocap/assets/
+ORBvoc.txt
+results/
+
+
+notuse/
+notuse2/
+

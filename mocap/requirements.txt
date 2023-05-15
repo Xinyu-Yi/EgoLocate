@@ -1,0 +1,11 @@
+numpy==1.23
+torch==1.12.1
+chumpy
+vctoolkit==0.1.9.26
+open3d
+pybullet
+qpsolvers
+cvxopt
+pygame
+numpy-quaternion
+quadprog

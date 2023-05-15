@@ -1,0 +1,144 @@
+%YAML:1.0
+
+
+# HPS 029757
+
+
+#--------------------------------------------------------------------------------------------
+# System config
+#--------------------------------------------------------------------------------------------
+
+# When the variables are commented, the system doesn't load a previous session or not store the current one
+
+# If the LoadFile doesn't exist, the system give a message and create a new Atlas from scratch
+#System.LoadAtlasFromFile: "Session_MH01_MH02_MH03_Mono"
+
+# The store file is created from the current session, if a file with the same name exists it is deleted
+#System.SaveAtlasToFile: "Session_MH01_MH02_MH03_Mono"
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+File.version: "1.0"
+
+Camera.type: "PinHole"
+
+# TotalCapture
+#Camera1.fx: 1066.666667  #1706.666667
+#Camera1.fy: 1066.666667  #1706.666667
+#Camera1.cx: 1280.
+#Camera1.cy: 720.
+#Camera1.k1: 0.0
+#Camera1.k2: 0.0
+#Camera1.p1: 0.0
+#Camera1.p2: 0.0
+#Camera.width: 2560
+#Camera.height: 1440
+#Camera.newWidth: 640
+#Camera.newHeight: 360
+
+
+# HPS 029756
+#Camera1.fx: 871.8002191615716
+#Camera1.fy: 885.5799798967853
+#Camera1.cx: 961.5442456700675
+#Camera1.cy: 550.6864687995145
+#Camera1.k1: -0.2546258499129524
+#Camera1.k2: 0.08039095012755905
+#Camera1.p1: 0.00014583290360426732
+#Camera1.p2: -1.397345667125021e-05
+#Camera.width: 1920
+#Camera.height: 1080
+#Camera.newWidth: 640
+#Camera.newHeight: 360
+
+
+# HPS 029757
+Camera1.fx: 870.3980232039048
+Camera1.fy: 883.7777267137334
+Camera1.cx: 977.2412305921678
+Camera1.cy: 550.4215456406043
+Camera1.k1: -0.26512391289441484
+Camera1.k2: 0.09675221734814766
+Camera1.p1: 6.0420687185190274e-06
+Camera1.p2: 0.00012467424426572157
+Camera.width: 1920
+Camera.height: 1080
+Camera.newWidth: 640
+Camera.newHeight: 360
+
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast
+ORBextractor.iniThFAST: 50
+ORBextractor.minThFAST: 20
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#---------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500.0
+
+
+# Camera frames per second
+Camera.fps: 30
+
+# 0: None    1: Tracking    2: Local Mapping    3: Loop Closing   4: Initializing
+VerboseLevel: 0
+debugOptimization: 1
+trustPIPduringMapping: 0
+
+oriSlerpTime: 0.1
+thNearPointsRealScale: 0.1     # in meter
+thMinBaselineRealScale: 0.01   # in meter
+
+
+# slam2
+numMinFrameInitializeTransPose: 30
+numMaxFrameInitializeTransPose: 240
+numMinFrameInitializeTransPose2: 120
+
+#useKnownCameraBodyOrientation: 1
+#constrainRelativeEigenRatio: 0
+#initSucceedMSE: 0.1
+#checkInitSucceedEigen: 0.04
+
+useKnownCameraBodyOrientation: 1
+constrainRelativeEigenRatio: 0
+initSucceedMSE: 0.1
+checkInitSucceedEigen: 0.04
+
+kAbsoluteTranEdgeGlobalBA: 0.5
+kPoseEdgeGlobalBA: 0.01
+kTranEdgeGlobalBA: 0.5
+kPoseEdgeLocalBA: 0.01
+kTranEdgeLocalBA: 0.5
+kPoseEdgeTrack: 0.01
+kTranEdgeTrack: 0.5
+ky: 1

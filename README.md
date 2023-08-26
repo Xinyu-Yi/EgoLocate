@@ -2,6 +2,10 @@
 
 Code for our SIGGRAPH 2023 [paper](https://arxiv.org/abs/2305.01599) "EgoLocate: Real-time Motion Capture, Localization, and Mapping with Sparse Body-mounted Sensors". See [Project Page](https://xinyu-yi.github.io/EgoLocate/).
 
+Authors: [Xinyu Yi](https://xinyu-yi.github.io/), [Yuxiao Zhou](https://calciferzh.github.io/), [Marc Habermann](https://people.mpi-inf.mpg.de/~mhaberma/), [Vladislav Golyanik](https://people.mpi-inf.mpg.de/~golyanik/), [Shaohua Pan](https://shaohua-pan.github.io/), [Christian Theobalt](https://people.mpi-inf.mpg.de/~theobalt/), [Feng Xu](http://xufeng.site/)
+
+<!--Affiliations: [Tsinghua University](https://www.tsinghua.edu.cn/), [ETH Zurich](https://ethz.ch/en.html), [Max Planck Institute for Informatics](https://www.mpi-inf.mpg.de/home/)-->
+
 ![teaser](pic/teaser.png)
 
 EgoLocate estimates accurate human pose, localization, and reconstructs the scene in sparse 3D points **from 6 IMUs and a head-mounted camera**. Importantly, EgoLocate **does not rely on pre-scanning the scene**, and runs in **real time on CPU**.        
@@ -79,6 +83,16 @@ Note that if you have a high-performance CPU and the method runs much faster tha
 If you find the project helpful, please consider citing us:
 
 ```
-TBD
+@article{EgoLocate2023,
+    author = {Yi, Xinyu and Zhou, Yuxiao and Habermann, Marc and Golyanik, Vladislav and Pan, Shaohua and Theobalt, Christian and Xu, Feng},
+    title = {EgoLocate: Real-time Motion Capture, Localization, and Mapping with Sparse Body-mounted Sensors},
+    journal={ACM Transactions on Graphics (TOG)},
+    year = {2023},
+    volume = {42},
+    number = {4},
+    numpages = {17},
+    articleno = {76},
+    publisher = {ACM}
+}
 ```
 

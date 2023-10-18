@@ -34,7 +34,7 @@ The system will first perform the curve initialization. When the initialization 
 
 - **[TotalCapture](https://cvssp.org/data/totalcapture/) dataset**
 
-  To evaluate our method on TotalCapture dataset, we synthesized monocular videos using a virtual first-person camera in 3 virtual scenes of different sizes. Please first contact the [TotalCapture authors](https://cvssp.org/data/totalcapture/#License) to get the permission to the dataset. Then, download the synthesized videos, data, and further instructions [here](). *(coming soon...)*
+  To evaluate our method on TotalCapture dataset, we synthesized monocular videos using a virtual first-person camera in 3 virtual scenes of different sizes. Please first contact the [TotalCapture authors](https://cvssp.org/data/totalcapture/#License) to get the permission to the dataset. Then, download the synthesized videos, data, and further instructions [here](https://cloud.tsinghua.edu.cn/d/a8627848e77b45d9a2fb/).
 
 - **[HPS](https://virtualhumans.mpi-inf.mpg.de/hps/download_and_license.html) dataset**
 
